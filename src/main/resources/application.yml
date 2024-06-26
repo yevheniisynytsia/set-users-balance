@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: solidgate-test-task
+  jpa:
+    show-sql: true
+    generate-ddl: false
+    hibernate:
+      ddl-auto: validate

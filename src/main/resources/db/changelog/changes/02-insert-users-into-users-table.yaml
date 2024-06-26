@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-users-into-users-table
+      author: yevhenii.synytsia
+      changes:
+        - loadData:
+            tableName: users
+            file: data/users.csv
+            separator: ','
