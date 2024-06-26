@@ -6,3 +6,7 @@ spring:
     generate-ddl: false
     hibernate:
       ddl-auto: validate
+
+user:
+  balanceUpdate:
+    batchSize: 10000

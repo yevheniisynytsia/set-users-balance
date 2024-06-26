@@ -3,6 +3,7 @@ package com.solidgate.test.task.service;
 import com.solidgate.test.task.model.User;
 import com.solidgate.test.task.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,12 +15,13 @@ import java.util.Map;
 @Service
 public class UserService {
 
+    @Value("${user.balanceUpdate.batchSize}")
+    private int batchSize;
+
     private final UserRepository userRepository;
 
     @Transactional
     public void updateUserBalances(Map<Integer, Integer> userBalances) {
-        int batchSize = 1000;
-
         List<Integer> userIds = new ArrayList<>(userBalances.keySet());
         int totalUsers = userIds.size();
 

@@ -3,3 +3,7 @@ spring:
     url: jdbc:tc:postgresql:latest:///integration-tests-db
     username: sa
     password: password
+
+user:
+  balanceUpdate:
+    batchSize: 10000
