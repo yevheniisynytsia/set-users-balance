@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:tc:postgresql:latest:///integration-tests-db
-    username: sa
-    password: password
+    username: postgres
+    password: default
 
 user:
   balanceUpdate:
